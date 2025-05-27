@@ -78,7 +78,7 @@ function App() {
       {/* Rest of your main content */}
       <main className="flex flex-col-reverse md:flex-row items-center justify-center px-6 py-8 gap-8 md:gap-12 w-full">
         {/* Text Section */}
-        <div className="w-full max-w-[500px] text-center md:text-left">
+        <div className=" ml-[15%] w-full max-w-[500px] text-center md:text-left">
           <h1 className="text-2xl sm:text-3xl font-semibold tracking-wider leading-snug text-[#1b2e13]">
             ZAVORA CRAFT <br /> JEWELLERY STORE
           </h1>
@@ -95,11 +95,11 @@ function App() {
         </div>
 
         {/* Image Section */}
-        <div className="w-full md:flex-1">
+        <div className="w-full md:w-auto md:flex-1 flex justify-center md:justify-center">
           <img
             src="/2222222222.png"
             alt="Leaf and CRAFT text"
-            className="w-[65%] h-auto object-cover"
+            className="w-[75%] md:w-[500px] h-auto object-contain"
           />
         </div>
       </main>
