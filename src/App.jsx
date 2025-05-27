@@ -84,7 +84,10 @@ function App() {
           </h1>
           <p className="mt-4 text-sm sm:text-base leading-relaxed text-[#2c2c2c]">
             Zavora Craft & Jewellery Store was born out of a passion for
-            preserving Sri Lanka's timeless heritage...
+            preserving Sri Lanka's timeless heritage through artisanal jewelry
+            and handcrafted treasures. Rooted in centuries-old traditions, each
+            piece we create tells a story etched not just in gold or silver, but
+            in soul, history, and pride.
           </p>
           <button className="mt-6 sm:mt-8 bg-[#263e1c] text-white px-6 py-2 rounded-full text-sm font-medium tracking-wide hover:bg-[#1a2c14] transition">
             COMING SOON
