@@ -14,7 +14,7 @@ function App() {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "1.5rem 3rem",
+    padding: "1.5rem 2rem",
     fontSize: "0.875rem",
     fontWeight: "500",
     color: "#1b2e13",
@@ -23,7 +23,8 @@ function App() {
 
   const navStyle = {
     display: "flex",
-    gap: "2rem",
+    gap: "1.5rem",
+    flexWrap: "wrap",
   };
 
   const linkStyle = {
@@ -33,22 +34,25 @@ function App() {
 
   const mainStyle = {
     display: "flex",
+    flexDirection: "row",
     flex: 1,
     alignItems: "center",
-    justifyContent: "space-between",
-    padding: "2rem 4rem",
+    justifyContent: "center",
+    padding: "2rem",
+    gap: "3rem",
+    flexWrap: "wrap-reverse",
   };
 
   const leftImageStyle = {
-    maxWidth: "1200px",
-    width: "100%",
+    maxWidth: "100%",
+    width: "750px",
     height: "auto",
   };
 
   const rightContent = {
+    maxWidth: "500px",
     flex: 1,
-    paddingLeft: "3rem",
-    maxWidth: "600px",
+    minWidth: "280px",
   };
 
   const headingStyle = {
@@ -56,11 +60,12 @@ function App() {
     fontWeight: "600",
     color: "#1b2e13",
     letterSpacing: "0.1em",
+    lineHeight: "1.3",
   };
 
   const paragraphStyle = {
-    marginTop: "1.5rem",
-    fontSize: "0.9rem",
+    marginTop: "1.25rem",
+    fontSize: "0.95rem",
     lineHeight: "1.75",
     color: "#2c2c2c",
   };
@@ -69,13 +74,22 @@ function App() {
     marginTop: "2rem",
     backgroundColor: "#263e1c",
     color: "#fff",
-    padding: "0.5rem 1.5rem",
+    padding: "0.6rem 1.75rem",
     borderRadius: "9999px",
     fontSize: "0.875rem",
     fontWeight: "500",
     border: "none",
     cursor: "pointer",
     letterSpacing: "0.05em",
+    transition: "background-color 0.3s",
+  };
+
+  const handleMouseEnter = (e) => {
+    e.target.style.backgroundColor = "#1a2c14";
+  };
+
+  const handleMouseLeave = (e) => {
+    e.target.style.backgroundColor = "#263e1c";
   };
 
   return (
@@ -102,9 +116,8 @@ function App() {
         </nav>
       </header>
 
-      {/* Main Section */}
+      {/* Main Content */}
       <main style={mainStyle}>
-        {/* Left: PNG Image */}
         <div>
           <img
             src="/2222222222.png"
@@ -112,8 +125,6 @@ function App() {
             style={leftImageStyle}
           />
         </div>
-
-        {/* Right */}
         <div style={rightContent}>
           <h1 style={headingStyle}>
             ZAVORA CRAFT <br /> JEWELLERY STORE
@@ -127,8 +138,8 @@ function App() {
           </p>
           <button
             style={buttonStyle}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1a2c14")}
-            onMouseLeave={(e) => (e.target.style.backgroundColor = "#263e1c")}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             COMING SOON
           </button>
